@@ -1,10 +1,10 @@
-# Hobby Discovery App
+# NextHobby
 
-Working description. The product has no name yet.
+Working description of the product.
 
 ## What it is
 
-A product for finding a hobby that matches what you are in the mood for and what you can
+A website for finding a hobby that matches what you are in the mood for and what you can
 actually commit right now, and then pointing you at where to begin. Every hobby carries
 structured information about what it demands, so hobbies can be filtered and compared at a
 glance instead of researched one at a time. Once a hobby is chosen, the product says what to buy
@@ -78,18 +78,51 @@ product curates and orients. It does not produce the lessons.
 - Cross-hobby comparability requires a consistent scale. What makes woodworking's physical
   demand legitimately comparable to watercolor's
 - How a user expresses appetite: a saved profile, a per-visit query, or a short intake
-- Platform is undecided. Mobile-first and web are both open
+- It is a website, not a native mobile application. Whether the layout is designed for phone
+  browsers first is still open, and it matters, since browsing hobbies and checking a kit list
+  while standing in a craft store are plausible uses
 
 ## Competitive landscape
 
-The alternatives are YouTube tutorials, hobby subreddits and forums, Skillshare and Udemy,
-Pinterest, Meetup for local groups, and retailer starter guides. Several are free and all have
-more instructional content than this product will ever have.
+Checked September 2026. Two kinds of alternative, and they need different answers.
 
-This product does not compete with them on content. It points into them. The structural gap it
+**Content sources.** YouTube tutorials, hobby subreddits and forums, Skillshare and Udemy,
+Pinterest, Meetup for local groups, and retailer starter guides. Several are free and all have
+more instructional content than this site will ever have.
+
+This site does not compete with them on content. It points into them. The structural gap it
 fills is that all of them hold what a hobby demands as prose, scoped to one hobby at a time, and
 prose cannot be filtered, sorted, or compared. Nor does any of them tell you what to buy and
 which video to open first, in one place, before you have committed to anything.
+
+**Direct competitors.** Hobby matching products already exist, and several are close to this
+idea. Descriptions below are paraphrased from each site.
+
+- [pastime.com](https://pastime.com/): a seven-question intake on time, budget and energy,
+  matching against a catalog of 176 hobbies, each scored on what starting it actually takes.
+  The closest existing product to this one.
+- [allthehobbies.com](https://allthehobbies.com/): a short AI quiz covering personality,
+  schedule and budget, followed by guided courses and a community of beginners. Bundles the
+  teaching this site declines to do.
+- [sidequest.ink](https://sidequest.ink/): matching filtered against the user's real
+  circumstances, plus guided starting and coaching from zero.
+- [findyourhobby.org](https://findyourhobby.org/): suggestions derived from available time,
+  budget, interests, goals and location, presented with reasoning and a starting plan.
+- [HobbyDex](https://hobby-dex.com/): a hobby tracker with game mechanics, built around
+  hobbies you have already picked rather than around the choice itself.
+
+**What this means for the differentiator.** Matching hobbies on effort is not by itself a
+distinguishing feature, because several products already do it. The differentiation has to come
+from something narrower. Candidates, none of them settled yet:
+
+- A browsable reference you return to and compare within, rather than a one-shot quiz that hands
+  you a single answer and is done
+- Kit lists specific enough to shop from, naming hook sizes and yarn weights, rather than a
+  general starting plan
+- Declining to teach or sell, which means recommendations can point at the best free material
+  anywhere instead of routing users into the site's own courses
+- Four separately scored axes, with mental and physical demand kept distinct, rather than one
+  blended measure of energy or effort
 
 ## Who it is for
 
