@@ -381,3 +381,18 @@ The bill story at 13 is inflated; the stale-bill rule is a timestamp
 **Model:** gpt-5.6-terra
 
 **Summary:** Re-estimated the bill generation and regeneration story from 13 to 8 Fibonacci points. The revised rationale treats stale-bill detection as a timestamp comparison within the existing bill workflow.
+## 2026-09-30 11:39:48 CST
+
+**User prompt (verbatim):**
+
+```text
+The 1-pagers now carry the detailed scope, so cut the vision back to what a product vision should be. First save the
+   current full version to restaurant-ordering/drafts/vision-versions-openai/v3_<date>_<time>_full.md and add a row for it
+   in that folder's README. Then rewrite restaurant-ordering/vision/vision-statement-openai.md as the Moore-style vision
+   statement plus the Business Buyer and Value section, a few hundred words in total, with a line pointing to the 1-pagers
+   for the detail. Only change your own vision and that drafts folder; do not touch any other file.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Archived the full OpenAI vision as a timestamped v3 draft, added its progression-table entry, and replaced the active vision with a concise Moore-style statement, Business Buyer and Value section, and a link to the detailed 1-pagers.
