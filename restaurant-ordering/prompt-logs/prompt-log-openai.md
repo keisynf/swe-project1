@@ -118,3 +118,126 @@ Revise thoroghly the derivation table, there are some ordinary cases where it br
 **Model:** gpt-5.6-terra
 
 **Summary:** Reworked the order-status derivation table into mutually exclusive, precedence-ordered rules. The ready rule now treats ready and delivered items as kitchen-complete, so delivered drinks with ready mains show ready; mixed active states remain preparing only when outstanding kitchen or delivery work exists.
+
+## 2026-09-28 17:45:56 CST
+
+**User prompt (verbatim):**
+
+```text
+This looks good. Now, lets create the personas
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Created personas for the guest, server, kitchen staff member, and restaurant administrator. Each persona documents its goals, needs, frustrations, success conditions, and permitted product workflows.
+
+## 2026-09-28 18:02:04 CST
+
+**User prompt (verbatim):**
+
+```text
+Your personas describe needs the vision doesn't support, and neither document says so. Some examples: Daniel serves "several tables," but the vision never attaches an order to a table. Priya wants to stop
+   cooking canceled items, but the vision doesn't alert the kitchen when an item is canceled. Daniel wants to know why an item was rejected, but the vision records no rejection reason. Maya wants dietary
+   information, but it isn't in the menu scope.
+
+   Check each persona against the vision and find every mismatch like these, not only the ones I listed. For each mismatch, don't change the vision. Either adjust the persona so it fits the product as scoped, or
+   keep the need and add it to a numbered open questions section at the end of the personas file, saying what the vision would need to add. Tell me which you did for each one.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Audited each persona against the unchanged vision. Removed unsupported table-based and preparation-note assumptions, and added seven numbered open questions for retained needs that require vision scope decisions.
+
+## 2026-09-28 18:57:05 CST
+
+**User prompt (verbatim):**
+
+```text
+Here are the answers. They're decisions, so update both the vision and the personas to match, and list every change you make to each file.
+
+   Tables: I'm reversing the persona change. An order is always attached to exactly one table. The QR code stays generic and identifies nothing; the server picks the table from a list when creating the order. The
+   admin maintains that list. Each table has a unique label, is deactivated rather than deleted, and has no seat-capacity attribute. Put Daniel's tables back.
+
+   1. Show item descriptions on the guest menu, managed by the admin. Dietary information is out of scope for this release.
+   2. Yes. The guest menu shows prices, and the admin maintains them. Prices include tax and service, so there's no tax rate anywhere in the system.
+   3. Yes, add a non-functional requirement for the QR menu on a phone. Propose a measurable target and mark the number as an assumption.
+   4. Yes, block it. Both kitchen staff and servers can mark an item unavailable during service. Marking it unavailable removes it from the guest menu immediately and stops it being added to new orders. If an
+   item is already on an order when it becomes unavailable, it stays on the order, and the kitchen rejects it if it can't be made.
+   5. Yes, with an optional free-text reason that the server can see.
+   6. Yes. When a server cancels an item the kitchen has already started, the kitchen gets an alert. Alerts are in-app only; nothing is pushed to a locked or sleeping device.
+   7. Roles are Server, Kitchen, and Admin, and each is a login. The kitchen uses one shared station login. Guests have no account and no login. Only the Admin role can use the admin view, except for the
+   availability toggle in answer 4.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Updated the vision and personas with the confirmed table model, expanded menu content and pricing rules, mobile performance assumption, availability behavior, rejection reasons, cancellation alerts, and role-based access. Removed the resolved persona open questions.
+
+## 2026-09-29 20:40:47 CST
+
+**User prompt (verbatim):**
+
+```text
+This a good start, but there are some key modifications that we need to make. The biggest thing we need to fix is that
+   the personas should be much shorter and quick to understand. However, there is some good content that we want to
+   preserve that could be included in the 1-pagers. Move the "Frustrations" and "Success looks like" material into a single
+   new file, drafts/adoption-risks-openai.md, organised by person. Then re-write each persona to be 2-3 paragraphs of
+   prose, no tables, no bullet lists, no headed subsections, no pull quotes. Each description should include: personal
+   detail including their name, age and circumstances; their job and what that job involves; their educational background
+   and their level of technical skill; and why they would be interested in this product and what they would want to do with
+   it. Remove the "Goals" and "Needs", most users do not have clear goals when using software. Replace that material with
+   prose explaining why the product would be useful to them and what they would want to do with it. A persona describes a
+   person, not the product, so do not restate scope, statuses, or requirement targets from the vision in them. Remove the
+   persona-to-workflow summary table as well. Keep all of them in personas/personas-openai.md. Additionally, the four
+   personas that we have are all competent users, add a fifth persona that is a new server that needs to onboard quickly to
+   the restaurant and learn to use the app in 1-day.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Rewrote the persona file as five concise two-paragraph biographies and created an adoption-risk draft that preserves frustrations and success signals by person. Added a new-server persona with a one-day onboarding need.
+
+## 2026-09-29 20:59:05 CST
+
+**User prompt (verbatim):**
+
+```text
+The personas are now too abstract. Keep the format, but in each "why interested" paragraph say concretely what they
+   would do with this product during their shift or visit, in plain language rather than status names or requirement
+   numbers. For Marcus, say what about the product he would find hard to learn on day one. Make each personal circumstance
+   something that affects how they would use the product, or cut it.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Kept the prose-only persona format while replacing abstract adoption statements with concrete visit and shift actions. Tied relevant personal circumstances to product use, removed an unrelated detail, and described Marcus's first-day learning challenges.
+
+## 2026-09-29 21:17:09 CST
+
+**User prompt (verbatim):**
+
+```text
+The people who use this product aren't the ones who buy it, and the vision doesn't say who decides to adopt and pay for
+   it or what they get as a business. Add a short final paragraph to the vision covering that.
+
+   Then make Elena that buyer: the owner-operator, not a hired manager. She decides whether the restaurant keeps the
+   product and also uses the admin view herself. Keep the same prose format, and say what would convince her it's worth
+   adopting and what would make her drop it.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Added a final vision paragraph naming the owner-operator as buyer and defining the business value and retention decision. Recast Elena as the owner-operator buyer who uses the administrator view and has explicit adoption and drop criteria.
+
+## 2026-09-29 21:20:38 CST
+
+**User prompt (verbatim):**
+
+```text
+In the vision, refer to "the owner-operator" rather than Elena, give the buyer paragraph its own heading, and include
+   the owner-operator in the opening "For" sentence.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Updated the vision opening to include the owner-operator and replaced the named buyer paragraph with a dedicated Business Buyer and Value section that uses the owner-operator role consistently.
