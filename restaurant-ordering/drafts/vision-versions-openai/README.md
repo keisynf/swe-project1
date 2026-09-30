@@ -16,5 +16,6 @@ and are not duplicated here. Filenames carry the time the file was written.
 | v2 | 941 | this folder | Adds preparing and delivered, a generic QR code, a server-only tax-inclusive bill, the closed order status, and tables for item transition ownership and order status derivation. |
 | — | 1071 | commit `58589b1` | Derivation table reworked into precedence-ordered rules so mixed orders resolve correctly. |
 | — | 1504 | current file | Orders attached to tables, menu prices and descriptions, availability controls, rejection reasons, kitchen cancellation alerts, roles and logins, a mobile performance target, and a business buyer section. |
+| v3 | 1504 | this folder | Archived full version before reducing the active vision to the concise Moore-style statement and Business Buyer and Value section; detailed scope now lives in the 1-pagers. |
 
 The current version is `vision/vision-statement-openai.md`.
