@@ -1,24 +1,5 @@
 # Prompt Log — OpenAI
 
-## 2026-09-25 11:32:57 CST
-
-**User prompt (verbatim):**
-
-```text
-I want to build a restaurant ordering and status platform. Customers that are in the restaurant are able to see the menu by scanning a QR code. The servers are able to take in the customers orders and see the
-   statuses of the items and the order. The kitchen staff receive the orders. There is also an admin view to manage the menu.
-
-   Act as a product manager for this product and write a draft product vision statement. Before you write it, ask me any questions you need answered about scope, because I have deliberately not decided everything
-   yet. Save the vision to restaurant-ordering/vision/vision-statement-openai.md.
-
-   Keep a log of our session as we go. After every reply you give me, including this one, append an entry to restaurant-ordering/prompt-logs/prompt-log-openai.md, creating the file if it does not exist. Each
-   entry needs the date and time, my prompt copied verbatim and unedited, which model and version you are, and a short factual summary of what you produced.
-```
-
-**Model:** gpt-5.6-terra
-
-**Summary:** Identified the key unresolved product-scope decisions and asked focused questions before drafting the product vision.
-
 ## 2026-09-25 11:33:27 CST
 
 **User prompt (verbatim):**
@@ -283,40 +264,12 @@ Two things are still off. The Marcus story is the delivery story renamed; add a 
    hard on a first day, and give Daniel the delivery story back. Re-estimate every story under the one-point-per-day
    definition instead of keeping the old numbers, and drop the "not elapsed-time commitments" hedge. For the shared-state
    NFR, propose an update-time target as an assumption instead of requiring a reopen.
-
-   Trim both visions after the one-pagers exist, not before. Right now the vision is the only place the lifecycle rules,
-   bill terms, and table model are written down. If you cut it first, those decisions are gone until you rebuild them. Once
-   the epics hold the detail, cut each vision back to the Moore statement plus a buyer paragraph, a few hundred words. Keep
-   the long versions as drafts; they show your iteration for the early-drafts requirement. Do it to both models' visions so
-   the comparison stays fair.
 ```
 
 **Model:** gpt-5.6-terra
 
-**Summary:** Added a separate Marcus first-day guidance story, restored Daniel’s delivery story, re-estimated all kitchen-epic stories, and moved the shared-state target into assumptions. Preserved long vision drafts and shortened both the OpenAI and Claude active visions to comparable Moore statement and buyer-value documents.
+**Summary:** Added a separate Marcus first-day guidance story, restored Daniel’s delivery story, re-estimated all kitchen-epic stories, and moved the shared-state target into assumptions.
 
-## 2026-09-29 22:05:01 CST
-
-**User prompt (verbatim):**
-
-```text
-Read HANDOFF.md and follow it. Then write the first 1-pager it describes.
-```
-
-**Model:** gpt-5.6-terra
-
-**Summary:** HANDOFF.md was not present in the workspace. Used the project prompt log, vision, personas, adoption-risk draft, and required template to create the first requested Kitchen Queue and Item Status epic one-pager, including named-persona stories, assumptions, testable quality requirements, and Fibonacci story-point estimates.
-## 2026-09-29 23:07:45 CST
-
-**User prompt (verbatim):**
-
-```text
-Read HANDOFF.md and follow it. Then write the first 1-pager it describes.
-```
-
-**Model:** gpt-5.6-terra
-
-**Summary:** Read the handoff, vision, personas, adoption risks, and template, then wrote the Kitchen Queue and Item Status epic one-pager. The document includes named-persona stories, source-backed assumptions, testable quality requirements, the ready-item cancellation alert, and Fibonacci sizing.
 ## 2026-09-30 11:08:08 CST
 
 **User prompt (verbatim):**
@@ -330,6 +283,7 @@ Good. Now write the remaining 1-pagers, enough to cover every requirement the vi
 **Model:** gpt-5.6-terra
 
 **Summary:** Proposed the remaining epics and mapped the vision and persona requirements to them. Identified the kitchen availability-toggle story as belonging in the menu and availability epic, so it will be moved rather than duplicated. Paused for the user’s review before writing the remaining one-pagers.
+
 ## 2026-09-30 11:11:06 CST
 
 **User prompt (verbatim):**
@@ -341,6 +295,7 @@ do it
 **Model:** gpt-5.6-terra
 
 **Summary:** Moved availability ownership from the kitchen epic to the new Guest Menu and Availability epic. Wrote the four approved remaining epics for guest menu and availability, table administration and role access, server order entry, and service completion and billing. Verified the five epics use the required sections, named-persona stories, testable quality requirements, and non-duplicated availability ownership.
+
 ## 2026-09-30 11:15:37 CST
 
 **User prompt (verbatim):**
@@ -356,6 +311,7 @@ Three gaps to decide. Elena can create and deactivate staff accounts and assign 
 **Model:** gpt-5.6-terra
 
 **Summary:** Updated the affected epics with Elena-managed staff accounts and role assignment, open-order item additions that create placed kitchen items, and bill-free closure for canceled or rejected orders. Added or revised the affected Fibonacci estimates and removed the trainer-help qualifier from Marcus’s billing content.
+
 ## 2026-09-30 11:26:25 CST
 
 **User prompt (verbatim):**
@@ -369,6 +325,7 @@ Adding items after a bill is generated makes that bill stale. Decide it this way
 **Model:** gpt-5.6-terra
 
 **Summary:** Replaced the unresolved bill-regeneration assumption with functional requirements: bills can be regenerated before closure, reflect current order items, and must be generated after the final item change before closing a delivered order. Updated integrity tests and the related Fibonacci estimates.
+
 ## 2026-09-30 11:29:23 CST
 
 **User prompt (verbatim):**
@@ -381,6 +338,7 @@ The bill story at 13 is inflated; the stale-bill rule is a timestamp
 **Model:** gpt-5.6-terra
 
 **Summary:** Re-estimated the bill generation and regeneration story from 13 to 8 Fibonacci points. The revised rationale treats stale-bill detection as a timestamp comparison within the existing bill workflow.
+
 ## 2026-09-30 11:39:48 CST
 
 **User prompt (verbatim):**

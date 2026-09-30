@@ -1,25 +1,6 @@
 # Prompt log — Claude
 
-## Entry 1 — 2026-09-20 20:52 CST
-
-**Model:** Claude Opus 5 (Kiro CLI)
-
-**Prompt (verbatim):**
-
-```
-I want to build a restaurant ordering and status platform. It has two sides. Customers see a menu page where they browse what the restaurant offers and place an order. Staff see an admin view where they track incoming orders and move them through status updates as they get prepared, so the customer can see where their order stands without having to ask.
-
-Act as a product manager for this product and write a draft product vision statement. Before you write it, ask me any questions you need answered about scope, because I have deliberately not decided everything yet. Save the vision to restaurant-ordering/vision/vision-statement-claude.md.
-
-Keep a log of our session as we go. After every reply you give me, including this one, append an entry to restaurant-ordering/prompt-logs/prompt-log-claude.md, creating the file if it does not exist. Each entry needs the date and time, my prompt copied verbatim and unedited, which model and version you are, and a short factual summary of what you produced.
-```
-
-**Summary of what was produced:**
-
-No vision statement written yet, per the instruction to ask scope questions first. Read `starter-prompt.md` to confirm the brief. Created this log file and posed 10 scope questions to the user, grouped as: ordering context (dine-in vs pickup vs delivery, single vs multi restaurant), payment handling, customer identity and how the status view is reached, the order status model and who advances it, menu management and item availability, notifications, staff roles and access, order modification and cancellation, hardware/form factor, and what is explicitly out of scope for a first release.
-
-
-## Entry 2 — 2026-09-20 21:10 CST
+## Entry 1 — 2026-09-20 21:10 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -35,10 +16,10 @@ Keep a log of our session as we go. After every reply you give me, including thi
 
 **Summary of what was produced:**
 
-No vision statement written yet, per the instruction to ask scope questions first. Read `starter-prompt.md` (now updated with the four-role brief: customer QR menu, server order entry, kitchen display, admin menu management) and the existing log. Appended this entry and asked 10 scope questions covering: whether customers can self-order or only browse, QR-to-table binding, payment handling, the item-level vs order-level status model and who advances it, how customers see status, the four roles and their auth/devices, menu management depth (modifiers, 86-ing, availability), notifications, order edits and splitting, and single vs multi restaurant scope plus explicit non-goals for v1.
+No vision statement written yet, per the instruction to ask scope questions first. Read `starter-prompt.md` (the four-role brief: customer QR menu, server order entry, kitchen display, admin menu management). Created this log file and asked 10 scope questions covering: whether customers can self-order or only browse, QR-to-table binding, payment handling, the item-level vs order-level status model and who advances it, how customers see status, the four roles and their auth/devices, menu management depth (modifiers, 86-ing, availability), notifications, order edits and splitting, and single vs multi restaurant scope plus explicit non-goals for v1.
 
 
-## Entry 3 — 2026-09-20 21:24 CST
+## Entry 2 — 2026-09-20 21:24 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -55,7 +36,7 @@ Created `vision/vision-statement-claude.md` — a draft v1 product vision built 
 Interpreted the typo "the orders should also be linked to the order" as items being linked to an order, and recorded that reading as open question 2 rather than assuming it silently.
 
 
-## Entry 4 — 2026-09-20 21:39 CST
+## Entry 3 — 2026-09-20 21:39 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -77,7 +58,7 @@ Revised `vision/vision-statement-claude.md` on four corrections, no new file cre
 Rewrote the open-questions list accordingly: dropped the resolved ones (QR granularity, splitting in/out of scope, who may mark paid) and added four new ones — split mechanics (splits created at settlement, an item cannot be divided across parts, a split can be undone before payment), order-to-server reassignment at shift change, item-to-order cardinality, and whether receipts must print to physical hardware.
 
 
-## Entry 5 — 2026-09-20 21:52 CST
+## Entry 4 — 2026-09-20 21:52 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -100,7 +81,7 @@ Open questions updated: removed the resolved item-cardinality and server-reassig
 Noted to the user that their "No" answered a different question than the one asked — the question was about undoing a split *before* payment, not after — so the unpaid case is recorded as open question 3 rather than assumed silently.
 
 
-## Entry 6 — 2026-09-20 22:03 CST
+## Entry 5 — 2026-09-20 22:03 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -121,7 +102,7 @@ Revised `vision/vision-statement-claude.md`, no new file created.
 Open questions: replaced the item-division-granularity question (now answered) with a rounding-overage question — whether over-collecting cents is acceptable to the business, what the receipt should disclose about a rounded share, and a recommendation to sanity-check with whoever owns tax and books. The unpaid-split-adjustment question remains open and unanswered.
 
 
-## Entry 7 — 2026-09-20 22:11 CST
+## Entry 6 — 2026-09-20 22:11 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -141,7 +122,7 @@ Revised `vision/vision-statement-claude.md`, no new file created.
 Also gave the user a status summary of the remaining open items in the doc: rounding-overage disclosure on receipts, the partly-settled re-split case, the Cancelled vs Rejected distinction, hardware choices (server devices and kitchen surface), notification delivery to a locked device, and whether receipts must print to physical hardware.
 
 
-## Entry 8 — 2026-09-20 22:26 CST
+## Entry 7 — 2026-09-20 22:26 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -164,7 +145,7 @@ Revised `vision/vision-statement-claude.md`, no new file created.
 7. Interpreted "no need to add anything of that for now" as covering the rounding-overage receipt disclosure and the receipt print-vs-screen question, and recorded both under 7.3 as deliberately deferred — on-screen receipts only, no extra rounding disclosure — while keeping the note that the over-collected cents deserve a look from whoever owns tax and books.
 
 
-## Entry 9 — 2026-09-20 22:38 CST
+## Entry 8 — 2026-09-20 22:38 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -183,7 +164,7 @@ Revised `vision/vision-statement-claude.md`, no new file created.
 3. Moved both items into 7.1 Decided and replaced the two now-obsolete open questions (TV input path, push infrastructure) with two new ones: **how a server actually learns their food is up** without push — flagged against success measures 1 and 4, which in-app-only alerting weakens, with three possible closers (app kept awake during a shift, kitchen bells the pass as today, a runner works expo) — and **how the pass tablet and TV are paired**, including what the TV shows if the tablet dies mid-service. Rescoped the alert-volume question from server handhelds to the pass tablet.
 
 
-## Entry 10 — 2026-09-20 22:55 CST
+## Entry 9 — 2026-09-20 22:55 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -204,7 +185,7 @@ Added a new **section 4, "Why a restaurant would choose this"**, to `vision/visi
 Renumbered the rest of the document to fit: "What we are building" 4 → 5 with all nine subsections 4.1–4.9 → 5.1–5.9, "Explicitly out of scope" 5 → 6, "What success looks like" 6 → 7, and "Decisions and open questions" 7 → 8 with 7.1–7.3 → 8.1–8.3. Updated the internal cross-reference from "section 4.4" to "section 5.4", and verified with a grep of all headings and section references that the numbering is consistent end to end.
 
 
-## Entry 11 — 2026-09-20 23:07 CST
+## Entry 10 — 2026-09-20 23:07 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -228,7 +209,7 @@ The template slot keywords are bolded inline so the structure is legible without
 Two str_replace attempts were needed: the first failed because an earlier edit had reflowed a line in the original paragraph, so the exact source text had to be re-read before replacing.
 
 
-## Entry 12 — 2026-09-20 23:18 CST
+## Entry 11 — 2026-09-20 23:18 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -247,7 +228,7 @@ Revised `vision/vision-statement-claude.md`, no new file created.
 3. **Section 3** — added a closing note making the buyer/user split explicit: the Admin is the owner-operator or manager who signs up, pays, and decides whether to keep the product, while servers and kitchen staff are the ones whose daily pain it must remove. Recorded that the two are not satisfied by the same things (the owner wants a cheap, low-commitment fix that does not touch payments; staff want something faster than shouting across a pass) and that a version pleasing only the buyer gets bought and then abandoned during service.
 
 
-## Entry 13 — 2026-09-20 23:41 CST
+## Entry 12 — 2026-09-20 23:41 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -273,7 +254,7 @@ The "why they might reject it" sections were written to surface conflicts alread
 Introduced one product-shaping observation not previously in the documents: Tom reorders physical tickets on the rail by hand, and a fixed-order digital queue would be a regression from the paper it replaces. Flagged to the user as a candidate requirement for the kitchen queue.
 
 
-## Entry 14 — 2026-09-24 09:47 CST
+## Entry 13 — 2026-09-24 09:47 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -294,7 +275,7 @@ This a good start, but there are some key modifications that we need to make. Th
 5. Deleted the four separate persona files: `persona-owner-claude.md`, `persona-server-claude.md`, `persona-kitchen-claude.md`, `persona-guest-claude.md`. Verified the resulting directory contents.
 
 
-## Entry 15 — 2026-09-24 10:06 CST
+## Entry 14 — 2026-09-24 10:06 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -315,7 +296,7 @@ Each narrative relies on the personas file for capability and motivation rather 
 Scenario 5 exercises the settlement rules end to end — four parts, a shared bottle and platter divided evenly with the shares rounding up, one part settled and locked, and the unpaid remainder then rearranged — as a check that the rules recorded in the vision hold together in a realistic case. They did.
 
 
-## Entry 16 — 2026-09-24 10:15 CST
+## Entry 15 — 2026-09-24 10:15 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -336,7 +317,7 @@ Also converted the re-split trigger from stated feeling to observable action —
 The prompt announced two corrections but supplied only the first; asked the user for the second rather than guessing.
 
 
-## Entry 17 — 2026-09-24 10:31 CST
+## Entry 16 — 2026-09-24 10:31 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -362,7 +343,7 @@ Renumbered the existing scenarios so the sequence runs 1–14 in document order,
 The two remaining gaps, reported to the user and not written: producing a receipt and marking a simple unsplit check paid (section 5.9 — scenario 8 covers split settlement but never a receipt), and a server rather than the kitchen marking an item unavailable (section 5.5 — scenario 10 only shows Tom doing it).
 
 
-## Entry 18 — 2026-09-24 10:44 CST
+## Entry 17 — 2026-09-24 10:44 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -383,7 +364,7 @@ Renumbered the following scenarios so the sequence again runs in document order 
 One gap from the earlier audit remains unwritten and was reported again to the user: producing a receipt and marking a simple unsplit check as paid.
 
 
-## Entry 19 — 2026-09-24 11:06 CST
+## Entry 18 — 2026-09-24 11:06 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -406,7 +387,7 @@ Located and read `one-pager-template.md` at the project root (not in the session
 No new product scope was introduced; every story traces to the vision, and needed-but-undecided items went to ASSUMPTIONS. Presented the format to the user for agreement before writing the remaining epics, and proposed a candidate epic breakdown.
 
 
-## Entry 20 — 2026-09-24 11:24 CST
+## Entry 19 — 2026-09-24 11:24 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -428,7 +409,7 @@ Applied all four corrections to `one-pagers/kitchen-queue-and-item-status-claude
 Also removed a now-stale clause in the sizing rationale for story 2 that referenced the deleted wet-hands ergonomics requirement. Added the collision story to the sizing table at **8 points** — joint largest in the epic — on the grounds that it is the hardest logic present and the easiest to get subtly wrong, requiring deliberate race testing rather than a happy path, and renumbered the following rows to 6–9. Verified by grep that the story count is nine, the NFR section holds seven bullets, and none of the removed wording survives in the NFR section.
 
 
-## Entry 21 — 2026-09-24 12:02 CST
+## Entry 20 — 2026-09-24 12:02 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -456,7 +437,7 @@ Three blockers were identified while deriving the epics and recorded as assumpti
 Two cross-epic sizing overlaps were noted in the rationales so the totals are not double-counted: keeping an already-open guest menu current is shared between Item Availability story 4 and Guest Menu story 3, and live menu propagation is shared between Menu Administration story 2 and Guest Menu story 4.
 
 
-## Entry 22 — 2026-09-24 12:18 CST
+## Entry 21 — 2026-09-24 12:18 CST
 
 **Model:** Claude Opus 5 (Kiro CLI)
 
@@ -468,7 +449,7 @@ assume that tax and service charge are included in the items' prices.
 
 **Summary of what was produced:**
 
-Resolved the tax blocker raised in entry 21 and propagated the decision to every document that carries a price.
+Resolved the tax blocker raised in entry 20 and propagated the decision to every document that carries a price.
 
 - **`one-pagers/settlement-and-splitting-claude.md`** — assumption 1 rewritten from "tax is not handled" to a decision: prices are tax-inclusive, an order total is the sum of its items, and no tax or service charge is calculated, apportioned, or displayed. Recorded the two unresolved consequences rather than hiding them: a receipt from this product carries no tax breakdown, so anything itemising tax must come from the register that takes the money; and because no tax rate is stored, a rate change is absorbed by re-entering prices by hand. Added a tax-inclusive sub-detail to the running-total story, removed tax from the not-sized blocker list and replaced it with a possible future tax breakdown, and updated story 1's sizing rationale to explain that it stays at 2 points precisely because there is no tax to apportion across split parts.
 - **`one-pagers/menu-and-staff-administration-claude.md`** — assumption 1 now states prices are entered tax-inclusive with no rate stored, and the add/edit-item story gained a sub-detail that the price entered is the price the guest pays.
@@ -477,4 +458,4 @@ Resolved the tax blocker raised in entry 21 and propagated the decision to every
 
 Verified by grep that all sixteen mentions of tax across the vision and the one-pagers now agree, with the only remaining open reference being the pre-existing deferred note about the rounding overage deserving a look from whoever owns tax and books.
 
-Noted to the user that this removes one of the three blockers from entry 21, leaving credential delivery and password reset, and that the rounding-overage question is now slightly sharper because a tax-inclusive price means the over-collected cents include tax the restaurant did not owe.
+Noted to the user that this removes one of the three blockers from entry 20, leaving credential delivery and password reset, and that the rounding-overage question is now slightly sharper because a tax-inclusive price means the over-collected cents include tax the restaurant did not owe.
