@@ -34,8 +34,12 @@ descriptions reflect what the file actually gained at each step.
 | v6 | 3110 | 4 (new), 5.1 | Added "why a restaurant would choose this": the alternatives a restaurant would pick instead, the positioning argument, and where that position is weak. |
 | v7 | 3119 | 1, and renumbering throughout | Vision statement restructured onto Geoffrey Moore's keyword template. Also repaired the numbering, since v6 had left subsections on 4.x beneath a parent renumbered to 5. |
 | v8 | 3223 | 1, 3 | FOR clause reaimed at the buyer and WHO clause at the staff who feel the pain, with the audience table updated to make the buyer-versus-user split explicit. |
+| v9 | 3289 | 5.9, 8.1 | Menu prices made tax- and service-inclusive, with no tax rate stored and no tax line anywhere. Last full-length version. |
 
-The current version is `vision/vision-statement-claude.md`.
+The current version is `vision/vision-statement-claude.md`. After the 1-pagers were
+written, it was cut back to the vision statement and a buyer-and-value section, because
+a product vision should be short and the detailed scope now lives in the 1-pagers. v9 is
+the full version it was cut from.
 
 Two things the revision history shows that are not obvious from the final document.
 Settlement was revised at v3, v4 and v5, three consecutive steps, which makes check
