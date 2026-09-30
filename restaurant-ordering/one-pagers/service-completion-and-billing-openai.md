@@ -8,10 +8,10 @@ Marcus needs to recognize when an ordinary order has reached that point in servi
 
 ## ASSUMPTIONS
 
-- The final bill is generated and viewed within the application. Printing, emailing, exporting, and providing guests direct bill access are outside the vision and require a separate decision.
+- The final bill is generated and viewed within the application. Printing, emailing, exporting, and providing guests direct bill access are outside this release.
 - Generating a final bill does not process payment, suggest a tip, calculate tax or service charges, or store a tax rate.
 - For first-shift billing usability testing, an 80% passing rate is an initial target that requires validation with Elena and servers before implementation.
-- A closed order is final: it cannot receive further item-state changes. An order whose derived status is `canceled` or `rejected` may close without a bill. The vision does not define archival, deletion, reopening, refunds, or post-close corrections, so those capabilities are outside this release.
+- A closed order is final: it cannot receive further item-state changes. An order whose derived status is `canceled` or `rejected` may close without a bill. Archival, deletion, reopening, refunds, and post-close corrections are outside this release.
 
 ## FUNCTIONAL REQUIREMENTS
 
@@ -34,7 +34,7 @@ Marcus needs to recognize when an ordinary order has reached that point in servi
 
 - **As Marcus, on my first server shift, I want to recognize when an order is ready for the billing step and generate a bill so that I can complete routine service without confusing delivery with payment.**
 
-  - Marcus can see that billing and closing become available only after the order is delivered.
+  - Marcus can see that closing an ordinary order becomes available only after the order is delivered and a current bill has been generated.
   - Marcus can generate the server-only bill.
   - The workflow makes clear that bill generation and order closure do not collect payment.
 
@@ -42,7 +42,7 @@ Marcus needs to recognize when an ordinary order has reached that point in servi
 
 - **Bill calculation integrity:** Automated integration tests must verify that every generated bill contains the current ordered items, selected modifiers and quantities, and a total equal to the sum of the included tax- and service-inclusive item prices. The tests must also verify that regeneration after an item change updates the bill and that no separate tax, service, or tip amount appears.
 - **Closure integrity:** Automated integration tests must permit closing a delivered order only after a bill has been generated after its most recent item change, permit bill-free closure only when the derived order status is `canceled` or `rejected`, and reject item changes after closure.
-- **Billing-flow usability:** Under the 80% initial usability target, at least 80% of representative new-server participants can identify a delivered sample order as eligible for billing and explain that the resulting bill does not process payment. Verify this in a moderated usability test.
+- **Billing-flow usability:** Under the 80% initial usability target, at least 80% of representative new-server participants can identify a delivered sample order as ready to bill and close and explain that the resulting bill does not process payment. Verify this in a moderated usability test.
 
 ## REQUIREMENTS SIZING
 

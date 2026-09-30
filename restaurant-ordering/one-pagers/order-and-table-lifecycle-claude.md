@@ -2,8 +2,7 @@
 
 **Epic:** keeping an order attached to the right table and the right server as the
 room and the roster change.
-**Sources:** `vision/vision-statement-claude.md` §5.2, §3;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §6, §7;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §6, §7;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -35,18 +34,17 @@ maintained in Menu and Staff Administration.
 
 ## ASSUMPTIONS
 
-1. **Where the list of tables comes from is unspecified.** The vision binds orders
-   to tables but never says who creates or maintains the table list, or whether
-   tables have capacities. Assumed to be admin-maintained configuration, and
-   assigned to the administration epic.
+1. **Tables are admin-maintained configuration** in the administration epic, with no
+   capacities.
 2. **A merge cannot be undone.** Once two orders are one, splitting them back apart
    is a settlement-time operation, not a reversal. Undecided.
 3. **Merging is allowed regardless of which server owns each order**, with the
    merged order taking one owner. Which owner it takes is undecided.
 4. **A partly settled order cannot be moved or merged.** Settled parts are locked
-   per the vision, and moving money already taken is not defined. Undecided.
+   (Settlement and Splitting), and moving money already taken is not defined.
+   Undecided.
 5. **A handoff transfers the whole order**, not individual tables or items, and
-   needs no manager approval — confirmed in the vision.
+   needs no manager approval.
 6. **An admin cannot force a reassignment.** Only a server can hand off an order,
    which means a server who leaves mid-shift without handing over leaves orders
    owned by someone who is not in the building. Undecided and a plausible
@@ -54,13 +52,11 @@ maintained in Menu and Staff Administration.
 7. **Handoff is one order at a time.** Whether a server can hand over an entire
    section in one action is undecided, and Devin's scenario has two tables.
 8. **The kitchen is never notified of a move, merge, or handoff**, since none of
-   them changes what is being cooked. Assumed from the vision's silence.
+   them changes what is being cooked.
 9. **History is retained** — an order remembers that it moved tables or changed
-   hands. The vision says the handoff is recorded but does not say for how long or
-   who can see it.
+   hands. How long the record is kept and who can see it is undecided.
 10. **No table state of its own.** The system does not track a table as free,
-    seated, or dirty; a table is only an identifier an order points at. Nothing in
-    the vision suggests otherwise.
+    seated, or dirty; a table is only an identifier an order points at.
 
 ## FUNCTIONAL REQUIREMENTS
 

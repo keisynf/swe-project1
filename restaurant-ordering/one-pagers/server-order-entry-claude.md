@@ -2,8 +2,7 @@
 
 **Epic:** taking an order at the table on a handheld and getting it to the kitchen
 intact.
-**Sources:** `vision/vision-statement-claude.md` §5.2, §5.7;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §4, §14;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §4, §14;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -36,33 +35,32 @@ settlement belong to Settlement and Splitting.
 ## ASSUMPTIONS
 
 1. **One open order per table at a time.** A second party at the same table starts
-   a new order only after the first is settled. The vision implies this but never
-   states it, and the merge capability suggests exceptions exist.
+   a new order only after the first is settled. The merge capability suggests
+   exceptions exist.
 2. **Items are sent in explicit batches, not individually as they are tapped.**
-   Devin composes the table's order and sends it in one action. Not stated in the
-   vision.
+   Devin composes the table's order and sends it in one action.
 3. **No coursing.** Nothing is held back for later firing; what is sent enters the
    queue immediately.
 4. **Covers, seat numbers, and guest names are not captured.** An order is attached
-   to a table and a server, and nothing else. The vision never mentions them.
+   to a table and a server, and nothing else.
 5. **Repeated dishes are separate items, not a quantity field**, because each one
    can carry its own note and its own status. Undecided.
 6. **A note can be edited until the item is sent, and not afterwards.** What happens
    when a guest changes their mind about a modification after firing is undecided.
-7. **Any server can act on any order, not only the server who owns it.** The vision
-   records order ownership but never says it restricts anything. Undecided.
+7. **Any server can act on any order, not only the server who owns it.** Orders
+   record their owner, but ownership restricts nothing. Undecided.
 8. **Voiding an unsent item leaves no record; voiding a sent item becomes a
-   Cancelled item** the kitchen is told about. The boundary between "removed" and
-   "cancelled" is assumed at the send action.
-9. **No undo and no confirmation step.** The vision has neither. Eli is the person
+   Cancelled item** the kitchen is told about. The send action is the boundary
+   between "removed" and "cancelled".
+9. **No undo and no confirmation step.** Eli is the person
    this hurts, and fear of a mistap in front of guests is the specific mechanism by
    which he reverts to paper.
 10. **No training mode.** A new server's first use is a live table.
 11. **Order entry requires connectivity.** Whether a server can compose an order
     offline and have it send on reconnect is undecided, and the restaurant's wifi
     reaches the back of the room unreliably.
-12. **Table identifiers already exist** and are maintained elsewhere. The vision
-    never says where the list of tables comes from.
+12. **Table identifiers already exist** and are maintained in Menu and Staff
+    Administration.
 
 ## FUNCTIONAL REQUIREMENTS
 

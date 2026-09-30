@@ -2,8 +2,7 @@
 
 **Epic:** the owner's control of what is on the menu, what it costs, and who can use
 the system.
-**Sources:** `vision/vision-statement-claude.md` §5.8, §3, §4.2;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §1, §2, §3;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §1, §2, §3;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -36,8 +35,8 @@ for the product.
 ## ASSUMPTIONS
 
 1. **An item is a name, a description, and a price, inside one category.** No
-   modifiers, option groups, combos, dayparts, or scheduled pricing — confirmed
-   excluded in the vision. No photos either, which is undecided. **Prices are entered
+   modifiers, option groups, combos, dayparts, or scheduled pricing. No photos either,
+   which is undecided. **Prices are entered
    tax-inclusive**: what Marisol types is what the guest pays, and no tax rate or
    service charge is stored anywhere, so a rate change means re-entering prices by
    hand.
@@ -45,26 +44,24 @@ for the product.
    they were ordered at. Undecided, and directly relevant because Marisol edits prices
    during the week.
 3. **Deleting an item does not affect historical orders.** Past orders keep what was
-   charged. Assumed, not stated.
+   charged.
 4. **No menu version history.** There is no record of what the menu looked like last
    month or who changed it. Undecided, and it is the only audit trail Marisol would
    plausibly want.
 5. **Roles are fixed: Admin, Server, Kitchen.** They cannot be created or customised,
-   and a user has exactly one. The vision names three and no more.
+   and a user has exactly one.
 6. **The Kitchen role is normally one shared login for the station**, not an account
-   per cook, so kitchen actions are not attributable to an individual. Confirmed as
-   the practical default in the vision.
+   per cook, so kitchen actions are not attributable to an individual.
 7. **Deactivating a user is possible; hard deletion is not defined.** What happens to
    orders a departed server still owns is undecided, and connects to the unresolved
    admin-reassignment gap in Order and Table Lifecycle.
-8. **Credential handling is unspecified.** Nothing in the vision says how a staff
-   member gets or resets a password, whether Marisol sets it for them, or what happens
-   when someone forgets it mid-service. Undecided and needed.
-9. **The table list is admin-maintained here.** The vision binds orders to tables but
-   never says where tables come from; this epic is the assumed home. Tables are
-   identifiers only, with no capacity or layout.
+8. **Credential handling is undecided.** How a staff member gets or resets a
+   password, whether Marisol sets it for them, and what happens when someone forgets
+   it mid-service are all open, and an answer is needed.
+9. **The table list is admin-maintained here.** Tables are identifiers only, with no
+   capacity or layout.
 10. **There is one restaurant and one menu**, with no multi-location or multi-tenant
-    support — confirmed in the vision.
+    support.
 11. **Marisol is the only Admin in practice**, though nothing prevents more. Whether a
     second admin is expected is undecided.
 12. **Admin has no visibility of service.** She cannot see the queue, order statuses,
@@ -100,7 +97,7 @@ for the product.
 
     * One role per user, from Admin, Server, or Kitchen.
     * A Server can take orders, mark items served, split and settle checks, and mark
-      items unavailable, and cannot change the menu or prices.
+      items unavailable and available again, and cannot change the menu or prices.
     * Creating a user takes a couple of minutes, because the floor turns over
       regularly.
 

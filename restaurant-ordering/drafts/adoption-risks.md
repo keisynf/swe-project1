@@ -7,7 +7,7 @@ frustrated by today, what they will actually use to judge the product, and the
 specific reasons they might reject it.
 
 The rejection reasons are the useful part. Most of them are consequences of
-decisions already recorded in the vision statement, not speculation.
+product decisions, not speculation.
 
 ---
 

@@ -4,11 +4,12 @@ Earlier versions of `vision/vision-statement-claude.md`, kept because the projec
 asks for "early draft versions of each product vision as well as a detailed log of the
 prompts that were used to generate the visions."
 
-Each revision overwrote the file in place during the working sessions, so these were
+Each revision overwrote the file in place during the working sessions, so v2 to v8 were
 recovered afterwards from the editor's own session snapshots. Forty-five snapshot copies
-existed, most differing only trivially; the seven below are the points where the document
-actually changed in a meaningful way. Filenames carry the real file modification time,
-which is the reliable chronology for this set.
+existed, most differing only trivially; those seven are the points where the document
+actually changed in a meaningful way. v9 was saved directly when the vision was trimmed.
+Filenames carry the real file modification time, which is the reliable chronology for
+this set.
 
 ## A discarded first attempt, and why
 

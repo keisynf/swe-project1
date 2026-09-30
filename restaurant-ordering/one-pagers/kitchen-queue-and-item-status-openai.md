@@ -15,6 +15,13 @@ The workflow must also make sense to Marcus on his first shift. He needs to unde
 - Kitchen cancellation alerts are visual, in-app alerts. They do not require acknowledgement before other kitchen work can continue.
 - On a stable network connection, a successful item-status or rejection-reason change appears in each relevant active application view within **3 seconds at the 95th percentile**, measured from confirmation of the change to display of the result. The target requires validation with the restaurant before implementation.
 - For first-shift usability testing, the restaurant’s normal onboarding content, a six-item sample, and an 80% passing rate are provisional and require validation with the owner-operator and servers before implementation.
+- The system derives each order status from its item states. A *fulfillable item* is one that is neither `canceled` nor `rejected`. The rules below are evaluated in order and the first match applies, except that `closed`, set as described in the Service Completion and Billing 1-pager, overrides the derived status:
+  1. `rejected`: every item is `rejected`.
+  2. `canceled`: no fulfillable item remains, and at least one item is `canceled`.
+  3. `delivered`: at least one fulfillable item exists, and every fulfillable item is `delivered`.
+  4. `ready`: at least one fulfillable item is `ready`, and every fulfillable item is `ready` or `delivered`. For example, delivered drinks and ready mains produce `ready`.
+  5. `placed`: at least one fulfillable item exists, and every fulfillable item is `placed`.
+  6. `preparing`: any other combination that has at least one fulfillable item.
 
 ## FUNCTIONAL REQUIREMENTS
 
@@ -43,7 +50,7 @@ The workflow must also make sense to Marcus on his first shift. He needs to unde
   - Daniel can see whether each item is `placed`, `preparing`, `ready`, `delivered`, `canceled`, or `rejected`.
   - Daniel can see an optional rejection reason entered by Priya.
   - The system derives the order state from its item states; Daniel cannot set an order state directly.
-  - The displayed order state follows the vision’s precedence rules, including `ready` when fulfillable items are all `ready` or `delivered` and at least one is `ready`.
+  - The displayed order state follows the order-status precedence rules in the assumptions, including `ready` when fulfillable items are all `ready` or `delivered` and at least one is `ready`.
 
 - **As Daniel, I want to mark a ready item delivered and cancel an undelivered item when necessary so that the record reflects the service handoff to the table.**
 

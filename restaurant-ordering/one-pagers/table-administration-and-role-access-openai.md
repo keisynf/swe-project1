@@ -9,8 +9,8 @@ The shared application also needs to present the right workflow to each person. 
 ## ASSUMPTIONS
 
 - Elena creates and deactivates staff accounts and assigns each account a Server, Kitchen, or Admin role. The Kitchen role may be assigned to the shared kitchen-station account rather than an individual cook account.
-- The product does not manage password reset or identity-provider integration. Those account-administration details are outside the vision and need a separate decision.
-- A table label is a human-readable unique identifier. The vision does not define a format, numbering convention, or maximum length, so Elena must confirm those rules before implementation.
+- The product does not manage password reset or identity-provider integration.
+- A table label is a human-readable unique identifier. Its format, numbering convention, and maximum length must be confirmed with Elena before implementation.
 - Deactivating a table blocks only new-order selection. Existing orders retain their table label and can continue through their existing item-status and billing workflows.
 - For access-flow usability testing, an 80% passing rate is an initial target that requires validation with Elena and staff before implementation.
 

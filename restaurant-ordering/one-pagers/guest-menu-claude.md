@@ -2,8 +2,7 @@
 
 **Epic:** the one page a paying customer ever sees, reached by scanning a code at
 the table.
-**Sources:** `vision/vision-statement-claude.md` §5.1, §8.1;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §15;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §15;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -35,27 +34,25 @@ order status, and guest accounts are all explicitly out of scope for the product
 ## ASSUMPTIONS
 
 1. **One code for the whole restaurant**, printed identically on every table, with no
-   table context in the scan. Confirmed in the vision, and it means this page can
-   never know which table it is being read at.
-2. **No photos.** The vision defines an item as a name, a description, and a price.
-   Whether dish photography is wanted is undecided, and it would change the page
-   substantially.
-3. **No allergen or dietary information, and no modifiers.** Excluded from v1 by the
-   vision. This is worth flagging beyond a scope note: a guest with an allergy gets
-   nothing from this page and must ask a server, and Devin's scenario has an allergy
-   in it.
-4. **One language.** No localisation is mentioned anywhere.
+   table context in the scan. This page can never know which table it is being read
+   at.
+2. **No photos.** An item is a name, a description, and a price (Menu and Staff
+   Administration). Whether dish photography is wanted is undecided, and it would
+   change the page substantially.
+3. **No allergen or dietary information, and no modifiers.** This is worth flagging
+   beyond a scope note: a guest with an allergy gets nothing from this page and must
+   ask a server, and Devin's scenario has an allergy in it.
+4. **One language.** There is no localisation.
 5. **Nothing about the guest is collected or stored** — no account, no identifier, no
-   analytics, no cookies beyond what is technically unavoidable. Assumed from the
-   vision's insistence that guests have no record.
+   analytics, no cookies beyond what is technically unavoidable.
 6. **No offline case.** A guest whose phone has no signal cannot read the menu, and
    the restaurant's wifi is weakest at the back of the room. Undecided whether that
    needs addressing, and it is the most likely way this page fails in practice.
 7. **Printing and placing the codes is the restaurant's problem**, not the product's.
-   The vision says the same code is printed on every table tent but nothing generates
-   or supplies it. Undecided whether the product produces a printable code at all.
-8. **No fallback if the page is down.** Paper menus are assumed to still exist, but
-   nothing in the product says so.
+   The same code is printed on every table tent, but nothing generates or supplies
+   it. Undecided whether the product produces a printable code at all.
+8. **No fallback if the page is down.** Paper menus remain the fallback; the product
+   provides none.
 
 ## FUNCTIONAL REQUIREMENTS
 
@@ -73,8 +70,8 @@ order status, and guest accounts are all explicitly out of scope for the product
     * Items grouped by category, each with its description and price.
     * Usable one-handed on a phone held at the table.
 
-* **As Priya, I want dishes the kitchen has run out of not to be offered, so that I do
-  not choose something and then be told no.**
+* **As Priya, I want the menu to offer only dishes the kitchen can still make, so that
+  I do not choose something and then be told no.**
 
     * Unavailable items are not presented as choices.
     * A dish that runs out while I have the page open stops being offered without me

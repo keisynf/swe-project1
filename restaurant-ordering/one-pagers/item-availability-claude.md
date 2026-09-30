@@ -2,8 +2,7 @@
 
 **Epic:** taking a dish off the menu the moment it runs out, from wherever the
 person who found out is standing.
-**Sources:** `vision/vision-statement-claude.md` §5.5, §5.1;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §8, §11, §15;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §8, §11, §15;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -36,20 +35,19 @@ concerns one item on one order, while unavailability concerns the dish for every
 ## ASSUMPTIONS
 
 1. **Availability is a simple on or off state, not a count.** The system does not
-   track portions remaining and does not decrement anything as orders are taken. The
-   vision has no inventory concept and explicitly excludes inventory depletion.
+   track portions remaining and does not decrement anything as orders are taken,
+   because inventory depletion is out of scope for the product.
 2. **Unavailability persists until someone reverses it.** It does not expire at the
    end of service or reset overnight. Undecided, and the daily reality is that most
    86'd items come back the next day, so a manual reset every morning may be a chore
    nobody does.
 3. **Anyone who can mark an item unavailable can also make it available again** —
-   kitchen or server, not only an admin. The vision grants the first power to both
-   roles and is silent on the reverse.
+   kitchen or server, not only an admin.
 4. **No confirmation step and no undo.** Marking the wrong dish unavailable takes
    it off every menu in the room instantly, and the only correction is to reverse it
    manually. Undecided.
-5. **Nobody is actively notified that an item became unavailable.** The vision's
-   notification list covers status changes only. Servers discover it by looking, or
+5. **Nobody is actively notified that an item became unavailable.** Notifications
+   cover status changes only. Servers discover it by looking, or
    by being unable to add the item. This may be wrong for a server mid-order at a
    table.
 6. **Items already ordered are unaffected.** Marking a dish unavailable does not
@@ -83,8 +81,8 @@ concerns one item on one order, while unavailability concerns the dish for every
     * The reason it cannot be added is stated plainly, not shown as a silent
       failure.
 
-* **As Priya, I want a dish that has run out not to appear as something I can
-  choose, so that I do not pick it and then be told no.**
+* **As Priya, I want the menu I am reading to list only dishes that can still be
+  ordered, so that I do not pick one that has run out and then be told no.**
 
     * Unavailable items are not presented as orderable on the guest menu.
     * The menu I am reading reflects the change without me reloading the page or

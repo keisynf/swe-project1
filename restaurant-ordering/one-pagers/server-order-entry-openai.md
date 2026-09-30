@@ -8,10 +8,10 @@ Marcus faces the same workflow without Daniel’s experience. On his first day, 
 
 ## ASSUMPTIONS
 
-- When Daniel or Marcus creates an order item, the system assigns it the `placed` state and associates it with exactly one selected active table, as defined in the vision.
+- When Daniel or Marcus creates an order item, the system assigns it the `placed` state and associates it with exactly one selected active table. The item lifecycle that follows is defined in the Kitchen Queue and Item Status 1-pager.
 - Each new order starts with one or more item entries. Because the bill must list quantities, this epic assumes a server records a positive quantity for each selected item; the default quantity, quantity-entry interaction, and maximum quantity require confirmation before implementation.
 - For first-shift usability testing, an 80% passing rate is an initial target that requires validation with Elena and servers before implementation.
-- The vision does not define editing modifiers after creation, splitting an order, moving an order between tables, or merging orders. These capabilities are outside this release unless separately decided.
+- Editing modifiers after creation, splitting an order, moving an order between tables, and merging orders are outside this release.
 
 ## FUNCTIONAL REQUIREMENTS
 

@@ -8,9 +8,9 @@ Elena needs to maintain the menu once and have every person use the same current
 
 ## ASSUMPTIONS
 
-- At the 95th percentile, a supported phone on a stable 4G or Wi-Fi connection renders the available menu categories and items within **2 seconds** of opening the generic QR-code URL. This is the vision’s initial target and requires validation with the restaurant and representative devices and networks.
+- At the 95th percentile, a supported phone on a stable 4G or Wi-Fi connection renders the available menu categories and items within **2 seconds** of opening the generic QR-code URL. This is an initial target and requires validation with the restaurant and representative devices and networks.
 - On a stable network connection, an availability change appears in the relevant active guest and server views within **3 seconds at the 95th percentile**, measured from confirmation of the change to display of the result. This proposed target requires validation before implementation.
-- The vision does not decide the ordering of categories or items, searching, filtering, images, or the presentation of modifiers. This release assumes no search, filter, or image capability; category and item ordering must be confirmed with Elena before implementation.
+- This release has no search, filter, or image capability. The ordering of categories and items and the presentation of modifiers must be confirmed with Elena before implementation.
 - An unavailable item remains on an existing order unchanged. Priya rejects the existing item only if the kitchen cannot fulfill it; changing availability does not automatically reject it.
 
 ## FUNCTIONAL REQUIREMENTS

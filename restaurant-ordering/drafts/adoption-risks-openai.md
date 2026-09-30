@@ -42,7 +42,7 @@ Daniel selects the correct table, creates accurate orders from available items, 
 
 Priya sees the items and modifiers needed for preparation, receives timely cancellation information, updates availability when the kitchen runs out of an item, and provides accurate readiness or rejection information without interrupting kitchen flow.
 
-## Elena, Restaurant Manager
+## Elena, Owner-Operator
 
 ### Adoption risks
 

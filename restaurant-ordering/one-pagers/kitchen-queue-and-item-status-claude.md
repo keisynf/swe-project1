@@ -2,8 +2,7 @@
 
 **Epic:** the shared record of where every ordered item stands, and the kitchen
 surface that drives it.
-**Sources:** `vision/vision-statement-claude.md` §5.3, §5.4, §5.6, §5.7;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §5, §10–13;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §5, §10–13;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -36,35 +35,32 @@ depends on them.
 
 ## ASSUMPTIONS
 
-Recorded rather than quietly decided. Each is either absent from the vision or
-explicitly open in it.
-
 1. **Queue order is arrival order.** The queue sorts oldest-sent first and cannot
    be manually rearranged. This is an identified gap, not a settled design: Tom has
    nineteen years of muscle memory in physically sliding tickets along the rail as a
    table's timing changes, and a fixed-order queue is a regression from the paper it
-   replaces. Manual reordering is assumed out of v1 and needs a decision.
+   replaces. Manual reordering is out of v1 and needs a decision.
 2. **No coursing.** Items are not held back or grouped into courses; starters and
-   mains enter the queue together as sent. Nothing in the vision mentions coursing.
+   mains enter the queue together as sent.
 3. **The TV is a read-only client of the same kitchen session that the pass tablet
-   drives.** How the two are actually paired is open in the vision (§8.2.2), as is
+   drives.** How the two are actually paired is an open question, as is
    what the TV displays if the tablet sleeps or dies mid-service.
-4. **Alerts are in-app only.** Per §5.6 nothing is pushed to a locked or sleeping
+4. **Alerts are in-app only.** Nothing is pushed to a locked or sleeping
    handheld, so a Ready alert waits until Devin next looks at his device. Whether
-   alerts batch, group by table, or throttle is open (§8.2.3), and an alert on every
+   alerts batch, group by table, or throttle is open, and an alert on every
    item is expected to get muted.
 5. **Rejection captures no structured reason.** Tom taps reject and the server is
    told; there is no reason code or free-text explanation. Undecided.
 6. **Served is marked per item.** A server delivering three plates marks three
    items. Whether a "serve all ready items for this table" action exists is
    undecided.
-7. **No undo on a status transition.** The vision contains no undo, confirm step,
-   or training mode anywhere. Eli is the person this hurts, and it is the reason he
+7. **No undo on a status transition.** There is no undo, confirm step, or training
+   mode anywhere. Eli is the person this hurts, and it is the reason he
    is expected to fall back to paper. A correction path is needed and undecided.
 8. **A Ready item leaves the TV when it is marked Served.** Rejected and cancelled
    items leave immediately. How long anything lingers for reference is undecided.
 9. **The kitchen queue shows the table number and the responsible server's name**,
-   since an order carries both. Not stated in the vision.
+   since an order carries both.
 10. **Admin has no view of the queue.** Marisol cannot answer "how long on table
     six?" from her own login, which is one of her stated frustrations. Whether the
     Admin role gets read-only status visibility is undecided.

@@ -2,8 +2,7 @@
 
 **Epic:** what the order cost, how it divides between guests, and recording that it
 has been paid — without processing the payment.
-**Sources:** `vision/vision-statement-claude.md` §5.9, §8.1, §8.3;
-`personas/personas-claude.md`; `drafts/scenarios-claude.md` §9;
+**Sources:** `personas/personas-claude.md`; `drafts/scenarios-claude.md` §9;
 `drafts/adoption-risks.md`.
 
 ## PROBLEM
@@ -36,7 +35,7 @@ Lifecycle.
 
 ## ASSUMPTIONS
 
-1. **Prices are tax-inclusive, and there is no service charge line.** Decided: the
+1. **Prices are tax-inclusive, and there is no service charge line.** The
    price Marisol sets is the price the guest pays, so an order total is simply the sum
    of its items and no tax or service charge is calculated, apportioned, or displayed
    anywhere. This keeps totals, split shares, and the rounding rule working on a single
@@ -50,15 +49,14 @@ Lifecycle.
 3. **Splitting happens at settlement time**, not while the table is eating.
    Undecided.
 4. **A shared item divides into even shares only.** No percentages, no custom
-   amounts per part — confirmed in the vision.
+   amounts per part.
 5. **Every share of a divided item is rounded up to the cent**, so all parts carry
    the same amount and the parts together exceed the order total by a few cents.
-   Confirmed in the vision, and deliberately over-collecting rather than leaving the
-   restaurant short.
-6. **The rounding overage is not disclosed on the receipt.** Deferred by decision in
-   the vision, and flagged there as worth a look from whoever owns tax and books,
-   since over-collected cents are real money.
-7. **Receipts are on-screen only.** No printer support in v1 — deferred by decision.
+   This deliberately over-collects rather than leaving the restaurant short.
+6. **The rounding overage is not disclosed on the receipt.** This is flagged as
+   worth a look from whoever owns tax and books, since over-collected cents are real
+   money.
+7. **Receipts are on-screen only.** No printer support in v1.
    Whether a guest can be sent a receipt some other way is undecided.
 8. **Only the Server role marks a part paid**, recorded against whoever did it.
    Whether an Admin can also do it is undecided, which matters because Marisol
@@ -70,7 +68,7 @@ Lifecycle.
 11. **Nothing prevents an order being left open indefinitely.** There is no
     end-of-night process that forces every order to be settled or closed. Undecided.
 12. **The kitchen never sees any of this** — one order is one ticket however the
-    check divides. Confirmed in the vision.
+    check divides.
 
 ## FUNCTIONAL REQUIREMENTS
 
