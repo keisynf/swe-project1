@@ -354,3 +354,57 @@ The 1-pagers now carry the detailed scope, so cut the vision back to what a prod
 **Model:** gpt-5.6-terra
 
 **Summary:** Archived the full OpenAI vision as a timestamped v3 draft, added its progression-table entry, and replaced the active vision with a concise Moore-style statement, Business Buyer and Value section, and a link to the detailed 1-pagers.
+
+## 2026-09-30 20:32:02 CST
+
+**User prompt (verbatim):**
+
+```text
+The vision statement in restaurant-ordering/vision/vision-statement-openai.md is too long and does not follow the
+      book's example closely enough. Sommerville's iLearn vision is about 130 words: a Moore-template statement followed by
+      one short paragraph about the buyer. Revise yours to match that, using these rules:
+
+      1. Follow the Moore template: FOR the buyer, WHO the need of the staff who feel the problem, the product name and
+      category, THAT the key benefit, UNLIKE a real competing alternative a restaurant would actually choose instead (not
+   the
+      problem restated), and OUR PRODUCT the main point of difference from that alternative.
+      2. Do not describe what each role can do. Feature-level detail belongs in the 1-pagers.
+      3. Write the statement as a few readable sentences rather than one long one, and do not repeat yourself.
+      4. End with one paragraph about the buyer, with no heading, of about 50 words. Say who buys the product, what they
+   get
+      from it, and why they would keep paying for it. Do not list reasons they would stop using it, and do not repeat
+   benefits
+      already stated above.
+      5. Keep the total under 200 words, excluding the title and status lines, and keep the line pointing to the 1-pagers.
+
+      Only edit your own vision file. Do not save a new draft version or touch any other file. Then append an entry to
+      restaurant-ordering/prompt-logs/prompt-log-openai.md in the same format as the existing entries.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Rewrote the OpenAI vision as a concise Moore-template statement with a real POS-suite alternative and a differentiated lightweight operational focus. Replaced the headed buyer section with one short buyer paragraph and retained the link to the detailed 1-pagers.
+
+## 2026-09-30 20:38:37 CST
+
+**User prompt (verbatim):**
+
+```text
+Your revised vision follows the structure, but it has become too abstract. Apart from the title, a reader cannot tell
+   what the product does. Fix these, keeping the same structure and staying under 200 words:
+
+   1. The WHO clause should name the problem the staff have today, not only what they need. Say what goes wrong with how
+   orders and menu changes are handled now.
+   2. The THAT clause should state the concrete benefit, not "keeps service coordination accurate and visible". Say what
+   the platform does for the floor and the kitchen, and what that changes during service.
+   3. Remove "as the restaurant grows". The product is for one restaurant and growth was never part of the scope.
+   4. Replace vague phrases such as "dependable shared record", "lightweight operational view", and "retaining direct
+   control over the restaurant information it relies on" with plain, specific wording.
+
+   Read the current file from disk before editing. Only edit your own vision file. Then append an entry to
+   restaurant-ordering/prompt-logs/prompt-log-openai.md in the same format as the existing entries.
+```
+
+**Model:** gpt-5.6-terra
+
+**Summary:** Replaced abstract wording with the current paper-ticket, verbal-update, and separate-menu-record problem, plus concrete shared order and availability information for the floor and kitchen. Removed the unsupported growth reference and made the buyer paragraph specific to one restaurant.
